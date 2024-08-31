@@ -4,3 +4,30 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.manager-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.bed-container {
+  background-color: lightblue; // temp for development
+  border: 1px solid grey;
+  padding: 1em;
+  min-height: 80vh;
+}
+
+.section-container {
+  background-color: rgb(185, 255, 176); // temp for development
+  display: grid;
+  gap: 5px;
+  height: 90%;
+
+}
+
+.section {
+  background-color: lightgray; // temp for development
+  padding: 1em;
+  border: 1px solid grey
+}

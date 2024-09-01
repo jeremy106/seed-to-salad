@@ -57,7 +57,7 @@ function BedContainer(props: Props) {
       ref={setNodeRef}
       style={style}
       className="
-  bg-primary-100
+  bg-primary-300
   w-[350px]
   h-[500px]
   max-h-[500px]
@@ -70,7 +70,7 @@ function BedContainer(props: Props) {
         {...attributes}
         {...listeners}
         className="
-        bg-primary-400
+        bg-primary-700
         text-md
         text-primary-50
         h-[60px]
@@ -81,17 +81,19 @@ function BedContainer(props: Props) {
         flex
         items-center
         justify-between
+        border-4
+        border-primary-300
         "
       >
         {/* Bed Title */}
-        <div className="flex gap-2 border-primary 700 text-xl">{bed.name}</div>
+        <div className="flex gap-2 text-xl">{bed.name}</div>
         <button
           onClick={() => {
             deleteBed(bed.id)
           }}
           className="
-        fill-primary-50
-        hover:fill-primary-600
+        fill-primary-400
+        hover:fill-primary-100
         py-1
         px-2
         "
@@ -99,13 +101,13 @@ function BedContainer(props: Props) {
           <DeleteIcon />
         </button>
       </div>
-        <div className="flex flex-grow px-2 py-1 border-2 border-primary-500 m-2 rounded-md">
+        <div className="flex flex-grow px-2 py-1 bg-primary-200 m-2 rounded-md">
           Section 1
         </div>
-        <div className="flex flex-grow px-2 py-1 border-2 border-primary-500 m-2 rounded-md">
+        <div className="flex flex-grow px-2 py-1 bg-primary-200 m-2 rounded-md">
           Section 2
         </div>
-        <div className="flex flex-grow px-2 py-1 border-2 border-primary-500 m-2 rounded-md">
+        <div className="flex flex-grow px-2 py-1 bg-primary-200 m-2 rounded-md">
           Section 3
         </div>
     </div>

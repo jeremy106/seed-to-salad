@@ -4,7 +4,11 @@ import BedManager from './BedManager'
 function App() {
   return (
     <>
-      <h1 className="text-3xl">Seed<span className='text-green-600'>To</span>Salad</h1>
+      <div className="flex justify-center m-4">
+        <h1 className="text-5xl">
+          Seed<span className="text-primary-500">To</span>Salad
+        </h1>
+      </div>
       <BedManager />
     </>
   )

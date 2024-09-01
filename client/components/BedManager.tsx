@@ -20,19 +20,22 @@ function BedManager() {
 
   const [activeBed, setActiveBed] = useState<Bed | null>(null)
 
-  const sensors = useSensors(useSensor(PointerSensor, {
-    activationConstraint: {
-      distance: 10
-    }
-  }))
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 10,
+      },
+    }),
+  )
 
   return (
     <>
-      <button
-        onClick={() => {
-          createNewBed()
-        }}
-        className="
+      <div className='flex justify-center'>
+        <button
+          onClick={() => {
+            createNewBed()
+          }}
+          className="
         h-[60px] 
         min-w-[200px]
         cursor-pointer
@@ -40,17 +43,18 @@ function BedManager() {
         text-white
         bg-primary-500
         p-4
-        ring-green-500
+        ring-black
         hover:ring-2
         flex
         gap-2
         m-10
         "
-      >
-        <PlusIcon /> Add New Bed
-      </button>
-    <div
-      className="
+        >
+          <PlusIcon /> Add New Bed
+        </button>
+      </div>
+      <div
+        className="
       m-auto
       flex
       w-full
@@ -59,28 +63,31 @@ function BedManager() {
       overflow-y-hidden
       px=[40px]
       "
-    >
-
-      <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd}>
-        <div className="m-auto flex gap-4">
-          <div className="flex gap-4">
-            <SortableContext items={bedsId}>
-              {beds.map((bed) => (
-                <BedContainer key={bed.id} bed={bed} deleteBed={deleteBed} />
-              ))}
-            </SortableContext>
+      >
+        <DndContext
+          sensors={sensors}
+          onDragStart={onDragStart}
+          onDragEnd={onDragEnd}
+        >
+          <div className="m-auto flex gap-4">
+            <div className="flex gap-4">
+              <SortableContext items={bedsId}>
+                {beds.map((bed) => (
+                  <BedContainer key={bed.id} bed={bed} deleteBed={deleteBed} />
+                ))}
+              </SortableContext>
+            </div>
           </div>
-        </div>
-        {createPortal(
-          <DragOverlay>
-            {activeBed && (
-              <BedContainer bed={activeBed} deleteBed={deleteBed} />
-            )}
-          </DragOverlay>,
-          document.body
-        )}
-      </DndContext>
-    </div>
+          {createPortal(
+            <DragOverlay>
+              {activeBed && (
+                <BedContainer bed={activeBed} deleteBed={deleteBed} />
+              )}
+            </DragOverlay>,
+            document.body,
+          )}
+        </DndContext>
+      </div>
     </>
   )
 

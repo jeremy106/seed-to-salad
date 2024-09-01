@@ -27,18 +27,40 @@ function BedManager() {
   }))
 
   return (
+    <>
+      <button
+        onClick={() => {
+          createNewBed()
+        }}
+        className="
+        h-[60px] 
+        min-w-[200px]
+        cursor-pointer
+        rounded-lg
+        text-white
+        bg-primary-500
+        p-4
+        ring-green-500
+        hover:ring-2
+        flex
+        gap-2
+        m-10
+        "
+      >
+        <PlusIcon /> Add New Bed
+      </button>
     <div
       className="
       m-auto
       flex
-      min-h-screen
       w-full
-      items-center
+      items-centre
       overflow-x-auto
       overflow-y-hidden
       px=[40px]
       "
     >
+
       <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd}>
         <div className="m-auto flex gap-4">
           <div className="flex gap-4">
@@ -48,27 +70,6 @@ function BedManager() {
               ))}
             </SortableContext>
           </div>
-          <button
-            onClick={() => {
-              createNewBed()
-            }}
-            className="
-            h-[60px] 
-            w-[350px]
-            min-w-[350px]
-            cursor-pointer
-            rounded-lg
-            border-2
-            border-primary-700
-            p-4
-            ring-green-500
-            hover:ring-2
-            flex
-            gap-2
-            "
-          >
-            <PlusIcon /> Add New Bed
-          </button>
         </div>
         {createPortal(
           <DragOverlay>
@@ -80,6 +81,7 @@ function BedManager() {
         )}
       </DndContext>
     </div>
+    </>
   )
 
   function createNewBed() {

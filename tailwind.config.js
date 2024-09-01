@@ -4,20 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // mainBackgroundColor: '#faf7f2',
-        // bedBackgroundColor: '#93643b',
         primary: {
-          '50': '#faf7f2',
-          '100': '#f4eee0',
-          '200': '#e9dcbf',
-          '300': '#dac497',
-          '400': '#c8a265',
-          '500': '#c0904f',
-          '600': '#b27c44',
-          '700': '#94633a',
-          '800': '#785034',
-          '900': '#61432d',
-          '950': '#342216',
+          '50': '#f6f6f6',
+          '100': '#e7e7e7',
+          '200': '#995c35',
+          '300': '#d0a774',
+          '400': '#999999',
+          '500': '#6d6d6d',
+          '600': '#5d5d5d',
+          '700': '#dae7af',
+          '800': '#454545',
+          '900': '#3d3d3d',
+          '950': '#262626',
         },
       },
       fontFamily: {
@@ -27,3 +25,5 @@ export default {
   },
   plugins: [],
 }
+
+// https://uicolors.app/create

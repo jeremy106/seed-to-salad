@@ -39,7 +39,7 @@ function BedContainer(props: Props) {
         className="
           ref={setNodeRef}
         style={style}
-        bg-primary-500
+        bg-primary-300
         w-[350px]
         h-[500px]
         max-h-[500px]
@@ -74,19 +74,19 @@ function BedContainer(props: Props) {
         text-md
         text-primary-50
         h-[60px]
-        rounded-md
+        rounded-
         rounded-b-none
         p-3
         font-bold
         flex
         items-center
         justify-between
-        border-4
+        
         border-primary-300
         "
       >
         {/* Bed Title */}
-        <div className="flex gap-2 text-xl">{bed.name}</div>
+        <div className="flex gap-2 text-xl text-primary-600">{bed.name}</div>
         <button
           onClick={() => {
             deleteBed(bed.id)
@@ -109,6 +109,9 @@ function BedContainer(props: Props) {
         </div>
         <div className="flex flex-grow px-2 py-1 bg-primary-200 m-2 rounded-md">
           Section 3
+        </div>
+        <div className="flex flex-grow px-2 py-1 bg-primary-200 m-2 rounded-md">
+          Section 4
         </div>
     </div>
   )

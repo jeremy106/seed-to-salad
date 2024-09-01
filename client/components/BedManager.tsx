@@ -43,7 +43,7 @@ function BedManager() {
         text-white
         bg-primary-500
         p-4
-        ring-black
+        ring-primary-700
         hover:ring-2
         flex
         gap-2

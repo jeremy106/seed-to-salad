@@ -92,8 +92,8 @@ function BedContainer(props: Props) {
             deleteBed(bed.id)
           }}
           className="
-        fill-primary-50
-        hover:fill-primary-100
+        fill-primary-700
+        hover:fill-primary-50
         py-1
         px-2
         "

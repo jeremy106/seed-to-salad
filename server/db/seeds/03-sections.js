@@ -4,8 +4,8 @@
  */
 export async function seed(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
+  await knex('sections').del()
+  await knex('sections').insert([
     {
       id: 1,
       bed_id: 1,

@@ -9,8 +9,8 @@ export default function SectionComponent(props: Props) {
   const { section } = props 
 
   return (
-    <div>
-      <h1>{section.plant_name ? 'planted' : 'empty'}</h1>
+    <div className="w-[350px]">
+      <h1>{section.plant_name ? section.plant_name : 'Empty'}</h1>
     </div>
   )
 }

@@ -18,14 +18,14 @@ export default function BedManager() {
   }
 
   return (
-    <div>
-      <div className="flex flex-col-auto items-center justify-center p-10">
+    <div className="h-[80vh]"> 
+      <div className="flex flex-col-auto items-center justify-center p-5">
         <h1 className="text-3xl">
           Bed manager
         </h1>
       </div>
       {/* Bed Container */}
-      <div id="bed-container" className="flex flex-wrap items-center justify-center gap-10 p-10">
+      <div id="bed-container" className="flex flex-wrap items-center justify-center gap-10 p-5 h-full">
         
         {
           beds.map((bed) => 

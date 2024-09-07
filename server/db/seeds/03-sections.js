@@ -33,5 +33,32 @@ export async function seed(knex) {
       germinated_at: null,
       matured_at: null,
     },
+    {
+      id: 4,
+      bed_id: 2,
+      position: 2,
+      plant_id: 1,
+      planted_at: new Date(Date.now()),
+      germinated_at: null,
+      matured_at: null,
+    },
+    {
+      id: 5,
+      bed_id: 3,
+      position: 2,
+      plant_id: 1,
+      planted_at: new Date(Date.now()),
+      germinated_at: null,
+      matured_at: null,
+    },
+    {
+      id: 6,
+      bed_id: 3,
+      position: 2,
+      plant_id: 1,
+      planted_at: new Date(Date.now()),
+      germinated_at: null,
+      matured_at: null,
+    },
   ]);
 };

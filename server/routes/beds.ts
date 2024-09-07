@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/', async (req, res) => {
   try {
-    const beds = await db.getBeds()
+    const beds = await db.getBedData()
     res.json(beds)
   } catch (error) {
     console.error(error)

@@ -1,9 +1,9 @@
-export type Id = string | number
 
 export interface Bed {
-  id: Id
+  id: number
   name: string
-  size : number
+  size: number
+  sections : Section[]
 }
 
 export interface Section {

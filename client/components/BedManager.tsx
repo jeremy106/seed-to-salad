@@ -1,13 +1,12 @@
 import { useQuery } from "@tanstack/react-query"
-// import { Bed } from "../../models/models"
 import BedComponent from "./BedComponent"
-import { getBeds } from "../apis/beds"
+import { getBedData } from "../apis/beds"
 
 export default function BedManager() {
   
   const { data:beds, isPending, isError} = useQuery({
     queryKey: ['beds'],
-    queryFn: () => getBeds()
+    queryFn: () => getBedData()
   })
   
   if(isPending){

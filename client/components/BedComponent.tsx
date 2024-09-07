@@ -13,6 +13,11 @@ export default function BedComponent(props: Props) {
       <div>
         {bed.name}
       </div>
+      {bed.sections.map((section) =>
+        <div key={section.id}>
+          {`Section: ${section.id}`}
+        </div>
+      )}
     </div>
   )
 }

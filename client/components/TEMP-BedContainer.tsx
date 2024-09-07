@@ -1,5 +1,5 @@
 import { useSortable } from '@dnd-kit/sortable'
-import DeleteIcon from '../components/assets/DeleteIcon'
+import DeleteIcon from './assets/DeleteIcon'
 import { Bed, Id } from '../../models/models'
 import { CSS } from '@dnd-kit/utilities'
 import LettuceIcon from './assets/LettuceIcon'

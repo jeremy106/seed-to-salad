@@ -6,7 +6,6 @@ export function up(knex) {
   return knex.schema.createTable('beds', (table) => {
     table.increments('id')
     table.string('name')
-    table.integer('size')
   })
 };
 

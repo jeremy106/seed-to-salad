@@ -9,3 +9,19 @@ export async function getBedData(){
   return beds
 }
 
+
+
+
+// const dummySection = {
+//   id: 1,
+//   bed_id: 1,
+//   position: 0,
+//   plant_id: 1,
+//   planted_at: 1723168936699,
+//   germinated_at: null,
+//   matured_at: null,
+//   plant_name: "Lettuce",
+//   profile_name: "default",
+//   days_to_germinate: 14,
+//   days_to_maturity: 60
+// }

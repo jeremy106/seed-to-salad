@@ -5,12 +5,20 @@
 export async function seed(knex) {
   // Deletes ALL existing entries
   // await knex('sections').del()
+
+  const dateToday = new Date(Date.now())
+
+  function dateShift(shift){
+    const newDate = dateToday.setDate(dateToday.getDate() - shift)
+    return newDate
+  }
+
   await knex('sections').insert([
     {
       bed_id: 1,
       position: 0,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(30),
       germinated_at: null,
       matured_at: null,
     },
@@ -18,7 +26,7 @@ export async function seed(knex) {
       bed_id: 1,
       position: 1,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(20),
       germinated_at: null,
       matured_at: null,
     },
@@ -26,7 +34,7 @@ export async function seed(knex) {
       bed_id: 1,
       position: 2,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(5),
       germinated_at: null,
       matured_at: null,
     },
@@ -34,7 +42,7 @@ export async function seed(knex) {
       bed_id: 1,
       position: 3,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(1),
       germinated_at: null,
       matured_at: null,
     },
@@ -42,7 +50,7 @@ export async function seed(knex) {
       bed_id: 2,
       position: 0,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(90),
       germinated_at: null,
       matured_at: null,
     },
@@ -50,7 +58,7 @@ export async function seed(knex) {
       bed_id: 2,
       position: 1,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(60),
       germinated_at: null,
       matured_at: null,
     },
@@ -74,7 +82,7 @@ export async function seed(knex) {
       bed_id: 3,
       position: 1,
       plant_id: 1,
-      planted_at: new Date(Date.now()),
+      planted_at: dateShift(40),
       germinated_at: null,
       matured_at: null,
     },

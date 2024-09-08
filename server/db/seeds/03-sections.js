@@ -6,11 +6,9 @@ export async function seed(knex) {
   // Deletes ALL existing entries
   // await knex('sections').del()
 
-  const dateToday = new Date(Date.now())
-
   function dateShift(shift){
-    const newDate = dateToday.setDate(dateToday.getDate() - shift)
-    return newDate
+    let date = new Date(Date.now()) 
+    return date.setDate(date.getDate() - shift)
   }
 
   await knex('sections').insert([

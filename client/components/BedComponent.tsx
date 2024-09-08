@@ -11,11 +11,11 @@ export default function BedComponent(props: Props) {
 
 
   return (
-    <div className="bg-white shadow-md rounded-md p-2 h-[100%]">
+    <div className="bg-white shadow-md rounded-md p-2 h-[100%] flex flex-col">
       <div>
         {bed.name}
       </div>
-      <div id="section-container" className="">
+      <div id="section-container" className="flex flex-col grow">
         {bed.sections.map((section) =>
           <SectionComponent key={section.id} section={section}/>
         )}

@@ -25,15 +25,12 @@ export default function BedManager() {
         </h1>
       </div>
       {/* Bed Container */}
-      <div id="bed-container" className="flex flex-wrap items-center justify-center gap-10 p-5 h-full">
-        
+      <div id="bed-container" className="flex flex-wrap justify-center gap-10 p-5 h-full">
         {
           beds.map((bed) => 
           <BedComponent key={bed.id} bed={bed}/>
           )
         }
-     
-
       </div>
     </div>
   )
